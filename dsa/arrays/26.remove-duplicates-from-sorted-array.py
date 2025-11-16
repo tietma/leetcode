@@ -13,8 +13,12 @@ class Solution(object):
         """
         l_i = 0
 
+        for ind in range(1,len(nums)):
+            if nums[ind] != nums[l_i]:
+                l_i += 1
+                nums[l_i] = nums[ind]
 
-        for r_i in range(1, len(nums)):
-            if
+        return l_i+1
+
 # @lc code=end
 
