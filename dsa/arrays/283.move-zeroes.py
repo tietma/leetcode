@@ -5,6 +5,7 @@
 #
 
 # @lc code=start
+from collections import deque
 
 class Solution(object):
     def moveZeroes(self, nums):
@@ -16,6 +17,9 @@ class Solution(object):
 
         for ind in range(0, len(nums)):
             if nums[ind] != 0:
-                nums[l_p], nums[ind] = nums[ind], nums[l_p]
+                nums[ind], nums[l_p] = nums[l_p], nums[ind]
                 l_p += 1
 
+
+
+        
